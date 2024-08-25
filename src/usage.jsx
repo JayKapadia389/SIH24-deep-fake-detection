@@ -1,5 +1,5 @@
 import React from "react";
-
+import './usage.css';
 
 const Usage = () => {
     return (
@@ -29,6 +29,15 @@ const Usage = () => {
                         <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.mp4" type="video/mp4" />
                     </video>
                 </div>
+                <div className="frame-text">
+                    <h2>Create Studio Quality Deepfakes</h2>
+                    <p>
+                        Be whoever you want to be with our advanced deepfake technology. Create studio quality face swaps with just a few clicks using our intuitive online face swap app.
+                    </p>
+                    {/* <button>Create a Face Swap Video for Free</button> */}
+                </div>
+
+
             </div>
 
             {/* Second Video Block */}
@@ -55,6 +64,13 @@ const Usage = () => {
                         <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video-compressed.mp4" type="video/mp4" />
                         <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.mp4" type="video/mp4" />
                     </video>
+                </div>
+                <div className="frame-video-container">
+                    <img
+                        src="src/Image/two.jpg" // Replace with your image URL
+                        alt="Description"
+                        className="frame-image"
+                    />
                 </div>
             </div>
 
