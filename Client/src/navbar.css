@@ -1,0 +1,21 @@
+.container{
+    /* height: 100px; */
+    color : white ;
+    padding : 0px ;
+    margin : 20px auto ;
+}
+
+.link:active , .link:visited{
+    color : white ;
+}
+
+.nav-item{
+    display : flex ;
+    /* flex-direction: column;  */
+    align-items: center;
+}
+
+.nav-item > a{
+    margin : 0px ;
+    font-size: 1.2rem;
+}
