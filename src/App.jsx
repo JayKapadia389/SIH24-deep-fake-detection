@@ -21,7 +21,7 @@ function App() {
               <div id='demo-div'>
                 <img src='/public/demo.jpg'></img>
               </div>
-              
+
               <UploadFile></UploadFile>
             </div>
 

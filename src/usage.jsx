@@ -4,7 +4,7 @@ import './usage.css';
 const Usage = () => {
     return (
         <div className="custom-frame-container">
-            <div className="frame-item">
+            <div className="frame-item left">
                 <div className="frame-video-container">
                     <video
                         src="src/Image/one.mp4" // Replace with your video URL or file path
@@ -25,7 +25,7 @@ const Usage = () => {
 
             {/* second usage */}
 
-            <div className="frame-item">
+            <div className="frame-item right">
                 <div className="frame-text">
                     <h2>Change Faces In Any Video
                     </h2>
@@ -43,7 +43,7 @@ const Usage = () => {
             </div>
 
             {/* third usage */}
-            <div className="frame-item">
+            <div className="frame-item left">
                 <div className="frame-video-container">
                     <video
                         src="src/Image/three.mp4" // Replace with your video URL or file path

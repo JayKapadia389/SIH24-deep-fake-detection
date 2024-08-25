@@ -14,23 +14,25 @@ const Navbar = () => {
                         <svg className="bi me-2" width="40" height="32">
                             <use xlinkHref="#bootstrap"></use>
                         </svg>
-                        <span className="fs-4">Deepfake Detection</span>
+                        <span className="fs-4 text-white " 
+                        // style={{color : "white"}}
+                        >Deepfake Detection</span>
                     </a>
                     <ul className="nav nav-pills">
                         <li className="nav-item">
-                            <a href="#" className="nav-link" aria-current="page">Home</a>
+                            <a href="#" className="link nav-link" aria-current="page">Home</a>
                         </li>
 
                         <li className="nav-item">
-                            <a href="#" className="nav-link" >Documentation</a>
+                            <a href="#" className="link nav-link" >Documentation</a>
                         </li>
 
                         <li className="nav-item">
-                            <a href="#" className="nav-link" >Detection</a>
+                            <a href="#" className="link nav-link" >Detection</a>
                         </li>
 
                         <li className="nav-item">
-                            <a href="#" className="nav-link" >About</a>
+                            <a href="#" className="link nav-link" >About</a>
                         </li>
                     </ul>
                 </header>

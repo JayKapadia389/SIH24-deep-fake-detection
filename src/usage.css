@@ -8,8 +8,9 @@
 .frame-item {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px;
 
 }
 
@@ -18,7 +19,7 @@
 }
 
 .frame-video-container {
-    width: 500px;
+    width: 50%;
     height: auto;
     overflow: hidden;
 }
@@ -36,7 +37,7 @@
 }
 
 .frame-text {
-    max-width: 500px;
+    max-width : 50%;
     color :white ;
 }
 
@@ -47,4 +48,8 @@
 
 .frame-text p {
     font-size: 24px;
+}
+
+.right{
+    flex-direction: row-reverse;
 }
