@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import Footer from './footer';
 import Navbar from './navbar'
 import UploadFile from './uploadFile'
-import Footer from './footer'
 
 function App() {
 
   return (
 
-    <>
-    
     <div className="App">
 
       <div id="nav-main-wrap">
@@ -34,9 +32,8 @@ function App() {
 
       <Footer/>
 
-    </div>
+      </div>
 
-    </>
   )
 }
 
