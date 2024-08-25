@@ -1,0 +1,49 @@
+.custom-frame-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.frame-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.frame-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.frame-video-container {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+}
+
+.frame-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.frame-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.frame-text {
+    max-width: 400px;
+}
+
+.frame-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.frame-text p {
+    font-size: 16px;
+}
