@@ -4,13 +4,19 @@ import './usage.css';
 const Usage = () => {
     return (
         <div className="custom-frame-container">
-            <div className="frame-item left">
+            <div className="frame-item">
                 <div className="frame-video-container">
                     <video
-                        src="src/Image/one.mp4" // Replace with your video URL or file path
-                        controls
-                        className="frame-video"
-                    />
+                        autoPlay
+                        loop
+                        playsInline
+                        className="block max-h-64 rounded-md object-cover w-full"
+                        poster="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.png"
+                        muted
+                    >
+                        <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video-compressed.mp4" type="video/mp4" />
+                        <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.mp4" type="video/mp4" />
+                    </video>
                 </div>
                 <div className="frame-text">
                     <h2>Create Studio Quality Deepfakes</h2>
@@ -25,7 +31,7 @@ const Usage = () => {
 
             {/* second usage */}
 
-            <div className="frame-item right">
+            <div className="frame-item">
                 <div className="frame-text">
                     <h2>Change Faces In Any Video
                     </h2>
@@ -43,7 +49,7 @@ const Usage = () => {
             </div>
 
             {/* third usage */}
-            <div className="frame-item left">
+            <div className="frame-item">
                 <div className="frame-video-container">
                     <video
                         src="src/Image/three.mp4" // Replace with your video URL or file path
