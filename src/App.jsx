@@ -1,14 +1,42 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './navbar'
+import UploadFile from './uploadFile'
+import Footer from './footer'
 
 function App() {
 
   return (
+
+    <>
+    
     <div className="App">
-      <Navbar></Navbar>
-     dfhwhfwfweof
+
+      <div id="nav-main-wrap">
+          <Navbar></Navbar>
+          
+          <main id='main-section'>
+
+            <div id='demo-uploadfile-wrap'>
+              {/* <demo></demo> */}
+
+              {/* remove this */}
+
+              <div id='demo-div'>
+                <img src='/public/demo.jpg'></img>
+              </div>
+              <UploadFile></UploadFile>
+            </div>
+
+          </main>
+
+      </div>
+
+      <Footer/>
+
     </div>
+
+    </>
   )
 }
 
