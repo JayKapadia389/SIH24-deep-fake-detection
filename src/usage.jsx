@@ -1,5 +1,5 @@
 import React from "react";
-
+import './usage.css';
 
 const Usage = () => {
     return (
@@ -17,7 +17,7 @@ const Usage = () => {
                     <p>
                         Be whoever you want to be with our advanced deepfake technology. Create studio quality face swaps with just a few clicks using our intuitive online face swap app.
                     </p>
-                    <button>Create a Face Swap Video for Free</button>
+                    {/* <button>Create a Face Swap Video for Free</button> */}
                 </div>
 
 
@@ -33,11 +33,13 @@ const Usage = () => {
                         Make yourself or a celebrity the star of any movie, music video, or meme. Unleash your creativity and create content that turns heads and sparks conversations
                     </p>
                 </div>
-                <img
-                    src="src/Image/two.jpg" // Replace with your image URL
-                    alt="Description"
-                    className="frame-image"
-                />
+                <div className="frame-video-container">
+                    <img
+                        src="src/Image/two.jpg" // Replace with your image URL
+                        alt="Description"
+                        className="frame-image"
+                    />
+                </div>
             </div>
 
             {/* third usage */}

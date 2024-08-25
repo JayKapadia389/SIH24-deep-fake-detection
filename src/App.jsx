@@ -3,6 +3,7 @@ import './App.css'
 import Footer from './footer';
 import Navbar from './navbar'
 import UploadFile from './uploadFile'
+import Usage from './usage'
 
 function App() {
 
@@ -16,19 +17,20 @@ function App() {
           <main id='main-section'>
 
             <div id='demo-uploadfile-wrap'>
-              {/* <demo></demo> */}
-
-              {/* remove this */}
 
               <div id='demo-div'>
                 <img src='/public/demo.jpg'></img>
               </div>
+              
               <UploadFile></UploadFile>
             </div>
 
           </main>
 
+          
       </div>
+
+      <Usage></Usage>
 
       <Footer/>
 

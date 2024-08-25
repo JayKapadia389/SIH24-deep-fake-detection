@@ -18,7 +18,7 @@
 }
 
 .frame-video-container {
-    width: 200px;
+    width: 500px;
     height: auto;
     overflow: hidden;
 }
@@ -30,20 +30,21 @@
 }
 
 .frame-image {
-    width: 200px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
 .frame-text {
-    max-width: 400px;
+    max-width: 500px;
+    color :white ;
 }
 
 .frame-text h2 {
-    font-size: 24px;
+    font-size: 50px;
     margin-bottom: 10px;
 }
 
 .frame-text p {
-    font-size: 16px;
+    font-size: 24px;
 }

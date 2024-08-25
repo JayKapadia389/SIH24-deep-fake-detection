@@ -14,4 +14,11 @@
   height: 100vh;
 }
 
+#demo-div{
+  width: 200px;
+}
+
+#demo-div img{
+  width: 100%;
+}
 
