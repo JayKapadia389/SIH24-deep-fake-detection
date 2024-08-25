@@ -3,58 +3,79 @@ import React from "react";
 
 const Usage = () => {
     return (
-        <div className="custom-frame-container">
-            <div className="frame-item">
-                <div className="frame-video-container">
+        <div className="relative mx-auto grid max-w-screen-lg grid-cols-1 gap-8 px-8 py-10 sm:grid-cols-2 lg:grid-cols-3">
+            {/* First Video Block */}
+            <div className="col-span-1">
+                <h2 className="text-3xl">Create Studio Quality Deepfakes</h2>
+                <div className="mt-8 text-base text-neutral-50">
+                    Be whoever you want to be with our advanced deepfake technology. Create studio quality face swaps with just a few clicks using our intuitive online face swap app.
+                </div>
+                <a
+                    className="block cursor-pointer rounded-full px-4 py-2 text-neutral-50 bg-[#3C1DFF] hover:bg-[#3C1DFF]/90 disabled:bg-slate-800 mt-8 w-fit"
+                    href="/create"
+                >
+                    Create a Face Swap Video for Free
+                </a>
+                <div className="mt-8 block aspect-video w-full">
                     <video
-                        src="src/Image/one.mp4" // Replace with your video URL or file path
-                        controls
-                        className="frame-video"
-                    />
+                        autoPlay
+                        loop
+                        playsInline
+                        className="block max-h-64 rounded-md object-cover w-full"
+                        poster="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.png"
+                        muted
+                    >
+                        <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video-compressed.mp4" type="video/mp4" />
+                        <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.mp4" type="video/mp4" />
+                    </video>
                 </div>
-                <div className="frame-text">
-                    <h2>Create Studio Quality Deepfakes</h2>
-                    <p>
-                        Be whoever you want to be with our advanced deepfake technology. Create studio quality face swaps with just a few clicks using our intuitive online face swap app.
-                    </p>
-                    <button>Create a Face Swap Video for Free</button>
-                </div>
-
-
             </div>
 
-            {/* second usage */}
-
-            <div className="frame-item">
-                <div className="frame-text">
-                    <h2>Change Faces In Any Video
-                    </h2>
-                    <p>
-                        Make yourself or a celebrity the star of any movie, music video, or meme. Unleash your creativity and create content that turns heads and sparks conversations
-                    </p>
+            {/* Second Video Block */}
+            <div className="col-span-1">
+                <h2 className="text-3xl">Create Studio Quality Deepfakes</h2>
+                <div className="mt-8 text-base text-neutral-50">
+                    Be whoever you want to be with our advanced deepfake technology. Create studio quality face swaps with just a few clicks using our intuitive online face swap app.
                 </div>
-                <img
-                    src="src/Image/two.jpg" // Replace with your image URL
-                    alt="Description"
-                    className="frame-image"
-                />
+                <a
+                    className="block cursor-pointer rounded-full px-4 py-2 text-neutral-50 bg-[#3C1DFF] hover:bg-[#3C1DFF]/90 disabled:bg-slate-800 mt-8 w-fit"
+                    href="/create"
+                >
+                    Create a Face Swap Video for Free
+                </a>
+                <div className="mt-8 block aspect-video w-full">
+                    <video
+                        autoPlay
+                        loop
+                        playsInline
+                        className="block max-h-64 rounded-md object-cover w-full"
+                        poster="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.png"
+                        muted
+                    >
+                        <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video-compressed.mp4" type="video/mp4" />
+                        <source src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.mp4" type="video/mp4" />
+                    </video>
+                </div>
             </div>
 
-            {/* third usage */}
-            <div className="frame-item">
-                <div className="frame-video-container">
-                    <video
-                        src="src/Image/three.mp4" // Replace with your video URL or file path
-                        controls
-                        className="frame-video"
-                    />
-
+            {/* Photo Block */}
+            <div className="col-span-1">
+                <h2 className="text-3xl">Create Studio Quality Deepfakes</h2>
+                <div className="mt-8 text-base text-neutral-50">
+                    Be whoever you want to be with our advanced deepfake technology. Create studio quality face swaps with just a few clicks using our intuitive online face swap app.
                 </div>
-                <div className="frame-text">
-                    <h2>Make New, Unforgettable Fun Memories</h2>
-                    <p>
-                        AI doesn't always have to be serious. Inject hilarity into your life by putting your friends, family, and coworkers into hilarious situations. Unleash your comedic genius.
-                    </p>
+                <a
+                    className="block cursor-pointer rounded-full px-4 py-2 text-neutral-50 bg-[#3C1DFF] hover:bg-[#3C1DFF]/90 disabled:bg-slate-800 mt-8 w-fit"
+                    href="/create"
+                >
+                    Create a Face Swap Video for Free
+                </a>
+                <div className="mt-8 block aspect-video w-full">
+                    <img
+                        src="https://d28dkohlqf5vwj.cloudfront.net/products/faceswap-realistic-video.png"
+                        alt="Deepfake Example"
+                        className="block max-h-64 rounded-md object-cover w-full"
+                    />
                 </div>
             </div>
         </div>
