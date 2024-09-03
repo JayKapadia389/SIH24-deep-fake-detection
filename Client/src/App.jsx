@@ -1,45 +1,42 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 import Footer from './footer';
-import Navbar from './navbar'
-import UploadFile from './uploadFile'
-import Usage from './usage'
+import Navbar from './navbar';
+import UploadFile from './uploadFile';
+import Usage from './usage';
+import Feature from './feature';
+import ParticlesBg from 'particles-bg';
+import Title from './title';
 
 function App() {
+  const [showUpload, setShowUpload] = useState(false);
+
+  const handleStartDetection = () => {
+    setShowUpload(true);
+    document.getElementById("upload-file-wrap").scrollIntoView({ behavior: 'smooth' })
+  };
 
   return (
-
     <div className="App">
 
+
       <div id="nav-main-wrap">
-          <Navbar></Navbar>
-          
-          <main id='main-section'>
+        <Navbar onStartDetection={handleStartDetection} />
 
-            <div id='demo-uploadfile-wrap'>
-
-              <div id='demo-div'>
-                <h1>
-                Uncover the truth—detect deepfakes instantly with our AI-powered video analysis tool.
-                </h1>
-                <img src='/public/demo.jpg'></img>
-              </div>
-
-              <UploadFile></UploadFile>
-            </div>
-
-          </main>
-
-          
+        <main id='main-section'>
+          <div id='demo-uploadfile-wrap'>
+            <Title onStartDetection={handleStartDetection} />
+            <img src='/liveness.png' alt="Liveness Detection" />
+          </div>
+        </main>
       </div>
+      {showUpload && <UploadFile />}
 
-      <Usage></Usage>
-
-      <Footer/>
-
-      </div>
-
-  )
+      <Usage />
+      <Feature />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

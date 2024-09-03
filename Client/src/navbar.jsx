@@ -1,9 +1,12 @@
 
 import React from "react";
+import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './navbar.css'
+import UploadFile from "./uploadFile";
 
-const Navbar = () => {
+const Navbar = ({ onStartDetection }) => {
+
     return (
 
         <section className="navbar-look">
@@ -14,9 +17,9 @@ const Navbar = () => {
                         <svg className="bi me-2" width="40" height="32">
                             <use xlinkHref="#bootstrap"></use>
                         </svg>
-                        <span className="fs-4 text-white " 
-                        // style={{color : "white"}}
-                        >Deepfake Detection</span>
+                        <div class="animated-text">
+                            Deepfake Detector
+                        </div>
                     </a>
                     <ul className="nav nav-pills">
                         <li className="nav-item">
@@ -24,11 +27,11 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav-item">
-                            <a href="#" className="link nav-link" >Documentation</a>
+                            <a href="#" className="link nav-link"  >Documentation</a>
                         </li>
 
                         <li className="nav-item">
-                            <a href="#" className="link nav-link" >Detection</a>
+                            <a href="#" className="link nav-link" onClick={onStartDetection} >Detection</a>
                         </li>
 
                         <li className="nav-item">

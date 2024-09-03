@@ -1,0 +1,21 @@
+.feature {
+
+    display: grid;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    background: #0a0d15;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+.feature h2 {
+    font-size: 60px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.feature ul li {
+    font-size: 24px;
+}
