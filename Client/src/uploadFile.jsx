@@ -1,68 +1,79 @@
-import { useState , useRef } from 'react'
-import './uploadFile.css'
-import { FaFileUpload } from "react-icons/fa";
-import axios  from 'axios';
+import { useState, useRef } from 'react';
+import './uploadFile.css';
+import axios from 'axios';
 import be_url from '../beUrl.js';
 
 function UploadFile() {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState("");
+  const fileInput = useRef(null);
 
-  let fileInput = useRef() ;
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
+    setUploadStatus("");
 
-  function handleDetection(){
+    if (file) {
+      handleUpload(file); // Automatically upload the file when selected
+    }
+  };
 
-    axios.post(be_url + "/test" , {name : "test"} , {withCredentials : true}, )
-    .then((res)=>{
-      console.log("res:" , res) ;
-    })
-    .catch((err)=>{
-      console.log("err:" ,err)
-    })
+  const handleUpload = (file) => {
+    if (file) {
+      const formData = new FormData();
+      formData.append('video', file);
 
-  }
+      axios.post(be_url + "/predict", formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+        withCredentials: true,
+      })
+        .then((res) => {
+          console.log("Upload successful:", res);
+          setUploadStatus("File uploaded successfully!");
+        })
+        .catch((err) => {
+          console.error("Upload error:", err);
+          setUploadStatus("Failed to upload file.");
+        });
+    } else {
+      console.log("No file selected");
+      setUploadStatus("No file selected.");
+    }
+  };
 
   return (
-
     <div id='upload-file-wrap'>
-    <div className="upload-file">
-        <div id='upload-file-area' >
-
-          <div 
-          id = "upload-file-prompt"
-          onClick={()=>{fileInput.current.click()}}
-          >
-            <FaFileUpload id='upload-file-icon'/>
-            <span>
-              upload file
-            </span>
-
-            <input 
-            type='file' 
-            ref={fileInput} 
+      <div className="upload-file">
+        <div
+          id="upload-file-area"
+          onClick={() => fileInput.current.click()}
+        >
+          <span style={{ color: "white" }}>Click to Upload Video</span>
+          <input
+            type='file'
+            ref={fileInput}
             id='file-input'
-            ></input>
-          </div>
-
+            accept="video/*"
+            onChange={handleFileChange}
+            style={{ display: 'none' }}
+          />
         </div>
 
+        <button
+          id='upload-button'
+          onClick={() => handleUpload(selectedFile)}
+          disabled={!selectedFile} // Disable the button if no file is selected
+        >
+          Upload Video
+        </button>
 
-          <div id='start-detection-checkbox-wrap'>
-
-            <div id='check-box-div'>
-              <input type='checkbox' id='audio-checkbox'/>
-              <span>use audio for detection</span>
-            </div>
-
-            <button id='start-detection-btn' onClick={handleDetection}>
-                Start Detection
-            </button>
-
-
-
-        </div>
-
+        {/* Display the upload status */}
+        {uploadStatus && <div id="upload-status">{uploadStatus}</div>}
+      </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default UploadFile
+export default UploadFile;
