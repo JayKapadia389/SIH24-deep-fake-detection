@@ -1,3 +1,3 @@
-let be_url = "https://b5e3-34-16-158-84.ngrok-free.app";
+let be_url = "http://127.0.0.1:5000/test";
 
 export default be_url
